@@ -1,0 +1,31 @@
+{
+  "name": "write-by-myself",
+  "version": "1.0.0",
+  "description": "for job interview",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "@commitlint/cli": "^9.1.2",
+    "@commitlint/config-conventional": "^9.1.2",
+    "husky": "^4.2.5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -e $GIT_PARAMS"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tiny0918/write-by-myself.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tiny0918/write-by-myself/issues"
+  },
+  "homepage": "https://github.com/tiny0918/write-by-myself#readme"
+}
