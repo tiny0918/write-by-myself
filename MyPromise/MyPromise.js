@@ -7,17 +7,17 @@ function MyPromise(executor) {
     this._value = undefined
     this._resolvedcbs = []
     this._rejectedcbs = []
-    function _resolve(value) {
-        const run = ()=>{
+    let _resolve = (value) => {
+        const run = () => {
             if (this._state !== PENDING) return
             this._state = FULFILLED
             this._value = value
             this._resolvedcbs.forEach((cb) => cb(value))
         }
-        setTimeout(run);
+        setTimeout(run)
     }
-    function _reject(reson) {
-        const run = ()=>{
+    let _reject = (reson) => {
+        const run = () => {
             if (this._state !== PENDING) return
             this._state = REJECTED
             this._value = reason
